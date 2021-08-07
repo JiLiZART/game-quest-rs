@@ -24,4 +24,8 @@ impl<'a> Place<'a> {
             ..Place::default()
         }
     }
+
+    pub fn look_around(&self) -> &'a str {
+        return self.description
+    }
 }

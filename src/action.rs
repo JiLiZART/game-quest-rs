@@ -1,13 +1,10 @@
-pub struct Action<'a> {
+pub struct ActionA<'a> {
     pub name: &'a str,
 }
 
-impl<'a> Action<'a> {
-    pub fn new(name: &'a str) -> Self {
-        Self { name }
-    }
-
-    pub fn execute(&self) -> String {
-        format!("Execute action {}", self.name)
+pub trait Action {
+    fn get_name(&self) -> &str;
+    fn execute(&self, args: Vec<&str>) -> String {
+        format!("Execute action {}", self.get_name())
     }
 }
