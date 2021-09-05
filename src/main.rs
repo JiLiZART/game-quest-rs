@@ -1,15 +1,15 @@
-mod world;
-mod player;
-mod place;
 mod action;
-mod door;
-mod place_item;
-mod game_item;
 mod action_look_around;
+mod door;
+mod game_item;
+mod place;
+mod place_item;
+mod player;
+mod world;
 
 use std::io;
-use world::*;
 use std::rc::Rc;
+use world::*;
 
 fn main() {
     let stdin = io::stdin();
@@ -23,6 +23,7 @@ fn main() {
     }
 
     loop {
+        println!("[{}][0] > ", world.player.name);
         input.clear();
         stdin.read_line(input);
 

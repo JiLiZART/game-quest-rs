@@ -1,5 +1,1 @@
-
-
-pub struct GameItem {
-
-}
+pub struct GameItem {}

@@ -1,13 +1,12 @@
-use crate::place::Place;
 use crate::game_item::GameItem;
+use crate::place::Place;
 use std::rc::Rc;
-
 
 pub struct Player<'a> {
     pub name: Box<&'a str>,
     pub place: Rc<Place<'a>>,
     pub has_inventory: bool,
-    inventory: Option<Box<Vec<GameItem>>>
+    inventory: Option<Box<Vec<GameItem>>>,
 }
 
 impl<'a> Player<'a> {

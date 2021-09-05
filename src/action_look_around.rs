@@ -20,6 +20,6 @@ impl<'a> Action for ActionLookAround<'a> {
     }
 
     fn execute(&self, world: &World, _: Vec<&str>) -> String {
-        return world.player.place.look_around().to_string()
+        return world.player.place.look_around().to_string();
     }
 }

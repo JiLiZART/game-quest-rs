@@ -1,5 +1,1 @@
-
-
-pub struct Door {
-
-}
+pub struct Door {}
